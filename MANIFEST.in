@@ -1,0 +1,5 @@
+include README.md
+include README-zh.md
+include requirements.txt
+include example.py
+recursive-include loki_sdk *.py
