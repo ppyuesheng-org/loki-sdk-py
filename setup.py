@@ -17,8 +17,8 @@ def read_requirements(filename):
 setup(
     name="loki-sdk-py",
     version="1.0.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="ppyuesheng",
+    author_email="ppyuesheng@hotmail.com",
     description="A Python SDK for sending logs to Loki server, based on python-logging-loki",
     long_description=read_readme("README.md"),
     long_description_content_type="text/markdown",

@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loki-sdk-py"
+version = "1.0.0"
+description = "A Python SDK for sending logs to Loki server, based on python-logging-loki"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "ppyuesheng", email = "ppyuesheng@hotmail.com"}
+]
+maintainers = [
+    {name = "ppyuesheng", email = "ppyuesheng@hotmail.com"}
+]
+keywords = ["loki", "logging", "sdk", "python", "grafana"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: System :: Logging",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.25.0",
+    "python-logging-loki>=0.3.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.8",
+]
+
+[project.urls]
+Homepage = "https://github.com/ppyuesheng-org/loki-sdk-py"
+Documentation = "https://github.com/ppyuesheng-org/loki-sdk-py#readme"
+Repository = "https://github.com/ppyuesheng-org/loki-sdk-py"
+"Bug Reports" = "https://github.com/ppyuesheng-org/loki-sdk-py/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["loki_sdk*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md"]
